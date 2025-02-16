@@ -61,6 +61,8 @@ public class PhotonManager : MonoBehaviourPunCallbacks
         {
             Debug.Log($"{player.Value.NickName}, {player.Value.ActorNumber}");
         }
+
+        PhotonNetwork.Instantiate("Player", new Vector3(0, 0, 0), Quaternion.identity, 0);
     }
 
     // Start is called before the first frame update
